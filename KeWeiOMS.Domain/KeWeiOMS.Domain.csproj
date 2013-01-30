@@ -53,6 +53,7 @@
     <Compile Include="Entities\CurrencyType.cs" />
     <Compile Include="Entities\DictionaryClasType.cs" />
     <Compile Include="Entities\DictionaryType.cs" />
+    <Compile Include="Entities\EmailReturn.cs" />
     <Compile Include="Entities\EmailTemplateType.cs" />
     <Compile Include="Entities\EmailType.cs" />
     <Compile Include="Entities\ModuleType.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Mappings\CurrencyTypeMap.cs" />
     <Compile Include="Mappings\DictionaryClasTypeMap.cs" />
     <Compile Include="Mappings\DictionaryTypeMap.cs" />
+    <Compile Include="Mappings\EmailReturnTypeMap.cs" />
     <Compile Include="Mappings\EmailTemplateTypeMap.cs" />
     <Compile Include="Mappings\EmailTypeMap.cs" />
     <Compile Include="Mappings\ModuleTypeMap.cs" />

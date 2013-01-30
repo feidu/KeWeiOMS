@@ -10,7 +10,10 @@
             url: '@Url.Action("List","Email")',
             pageNumber: 1,
             pageSize: 20,
-            pageList: [20, 40, 60, 80, 100]
+            pageList: [20, 40, 60, 80, 100],
+            onDblClickRow: function (index, row) {
+                window.open('@Url.Action("EmailRe", "Email")?id='+row.Id);
+            }
         });
 
     });
@@ -125,7 +128,6 @@
                 }
             });
         }
-   
 
     //删除
     function del() {
@@ -257,15 +259,15 @@
                 是否回复
             </th>
 
-            <th field="GenerateOn" width="100">
+            <th field="GenerateOn" width="100" formatter="getDate">
                 邮件生成时间
             </th>
 
-            <th field="CreateOn" width="100">
+            <th field="CreateOn" width="100" formatter="getDate">
                 同步时间
             </th>
 
-            <th field="ReplyOn" width="100">
+            <th field="ReplyOn" width="100" formatter="getDate">
                 回复时间
             </th>
 
@@ -274,9 +276,9 @@
 		</thead>
 		</table>
         <div id="toolbar">
-        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="c_dlg();">新建</a>  
+@*      <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="c_dlg();">新建</a>  
         <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="e_dlg()">编辑</a>  
-        <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="del();">删除</a>  
+        <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="del();">删除</a>  *@
         </div> 
         
     <div id="c_dlg"></div>

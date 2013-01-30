@@ -66,7 +66,7 @@ namespace KeWeiOMS.Web.Controllers
         [OutputCache(Location = OutputCacheLocation.None)]
         public ActionResult Edit(EmailTemplateType obj)
         {
-           
+          
             try
             {
                 NSession.Update(obj);
@@ -105,6 +105,13 @@ namespace KeWeiOMS.Web.Controllers
                 .List<EmailTemplateType>();
 
             return Json(new { total = objList.Count, rows = objList });
+        }
+
+        public ActionResult Details(int id)
+        {
+            EmailTemplateType obj = GetById(id);
+            return View(obj);
+        
         }
 
     }
